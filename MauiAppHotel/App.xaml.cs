@@ -1,7 +1,33 @@
-﻿namespace MauiAppHotel
+﻿
+using MauiAppHotel.Models;
+
+namespace MauiAppHotel
 {
     public partial class App : Application
     {
+        public List<Quarto> lista_quartos = new List<Quarto>
+        {
+            new Quarto()
+            {
+                Descricao = "Suíte de Luxo",
+                ValorDiariaAdulto = 150.0,
+                ValorDiariaCrianca = 65.0
+            },
+
+              new Quarto()
+            {
+                Descricao = "Suíte Intermediaria",
+                ValorDiariaAdulto = 110.0,
+                ValorDiariaCrianca = 55.0
+            },
+             new Quarto()
+            {
+                Descricao = "Suíte BaseSingle",
+                ValorDiariaAdulto = 80.0,
+                ValorDiariaCrianca = 40.0
+            },
+        };
+
         public App()
         {
             InitializeComponent();

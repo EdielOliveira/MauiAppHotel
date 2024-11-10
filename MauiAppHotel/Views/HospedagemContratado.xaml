@@ -2,11 +2,59 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratado"
-             Title="HospedagemContratado">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Primary}">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Text="Suíte de Luxo"
+               TextColor="White"
+               FontFamily="Itim-Regular"
+               FontSize="50"
+               HorizontalTextAlignment="Center"/>
+
+        <Frame Margin="10">
+            <HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Adultos: "/>
+                    <Label Text="2" TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout>
+                <Label Text="Crianças: "/>
+                <Label Text="2" TextColor="{StaticResource Primary}"/>
+            </HorizontalStackLayout>
+           </HorizontalStackLayout>
+        </Frame>
+
+
+        <Frame Margin="10">
+            <Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto">
+
+                <Label Grid.Row="0" Grid.Column="0"
+                       Text="Check-in: "/>
+                <Label Grid.Row="0" Grid.Column="1"
+        Text="Check-out: "/>
+                <Label Grid.Row="0" Grid.Column="2"
+        Text="Estadia: "/>
+
+                <Label Grid.Row="1" Grid.Column="0"
+               Text="27/05/24"/>
+                <Label Grid.Row="1" Grid.Column="1"
+Text="30/05/24 "/>
+                <Label Grid.Row="1" Grid.Column="2"
+Text="3"/>
+            </Grid>
+        </Frame>
+
+        <Frame Margin="10">
+            <HorizontalStackLayout>
+                <Label Text="Valor Total:"/>
+                <Label Text="R$: 750,00"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
