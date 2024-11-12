@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.InicioPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2D4253">
+    
+    <StackLayout>
+        <Grid RowDefinitions="*,Auto,*"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+
+            <Frame CornerRadius="20" Padding="0" >
+                      <Image Source="copacabana_palace.png" 
+                       Aspect="AspectFill"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+            </Frame>
+
+
+            <StackLayout Grid.Row="1"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Padding="10"
+                         Margin="20">
+               
+                <Label Text="Bem-vindo ao APP"
+                       FontSize="Medium"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontFamily="Itim-Regular" />
+                <Label Text="HOTELCONFORT"
+                       FontSize="32" 
+                    HorizontalOptions="Center"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontFamily="Itim-Regular" />
+            </StackLayout>
+
+            <Frame Grid.Row="2"
+                   BackgroundColor="#9F6853"
+                   BorderColor="#9F6853"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   CornerRadius="20"
+                   Padding="90">
+
+                <StackLayout>
+
+                    <Button Text="Fazer Chek-in" 
+                 Clicked="Button_Clicked" 
+                 BackgroundColor="#FED79F" 
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 TextColor="White" 
+                 FontFamily="Itim-Regular" 
+                 FontSize="20"
+                 Margin="10"/>
+
+                    <Button Text="Sobre Nós"
+                            Clicked="Button_Clicked_1"
+                            Background="Transparent"
+                            FontSize="20"
+                            FontFamily="Itim-Regular"
+                            TextColor="White"/>
+                </StackLayout>
+
+            </Frame>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

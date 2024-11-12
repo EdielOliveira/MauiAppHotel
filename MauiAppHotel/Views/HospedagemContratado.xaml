@@ -3,58 +3,84 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratado"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Primary}">
-    <VerticalStackLayout>
-        <Label Text="Suíte de Luxo"
-               TextColor="White"
-               FontFamily="Itim-Regular"
-               FontSize="50"
-               HorizontalTextAlignment="Center"/>
+             BackgroundColor="#2D4253">
 
-        <Frame Margin="10">
-            <HorizontalStackLayout>
-                <HorizontalStackLayout>
-                    <Label Text="Adultos: "/>
-                    <Label Text="2" TextColor="{StaticResource Primary}"/>
-                </HorizontalStackLayout>
-                
-                <HorizontalStackLayout>
-                <Label Text="Crianças: "/>
-                <Label Text="2" TextColor="{StaticResource Primary}"/>
-            </HorizontalStackLayout>
-           </HorizontalStackLayout>
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                       Padding="10">
+
+
+        <Button Text="Voltar" 
+       BackgroundColor="#FED79F" 
+       HorizontalOptions="Start" 
+       Margin="10"
+       TextColor="White" 
+       FontFamily="Itim-Regular" 
+       FontSize="20"/>
+
+        <Label 
+       Text="SUÍTES"
+       FontFamily="Itim-Regular"
+       HorizontalTextAlignment="Center"
+       FontSize="40"
+       TextColor="{StaticResource White}"  />
+
+        <Label 
+          Margin="10"
+          Text="(Suíte de Luxo)"
+          FontFamily="Itim-Regular"
+          HorizontalTextAlignment="Center"
+          FontSize="15"
+          TextColor="{StaticResource White}"  />
+
+        <Frame Padding="10" BackgroundColor="#9F6853" BorderColor="#9F6853">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto, Auto">
+
+                    <Frame Grid.Row="0" Margin="10"  BackgroundColor="#9F6853" BorderColor="White">
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <HorizontalStackLayout Margin="10">
+                                <Label Text="Adultos: "/>
+                                <Label Text="2" TextColor="White"/>
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Margin="10">
+                                <Label Text="Crianças: "/>
+                                <Label Text="2" TextColor="White"/>
+                            </HorizontalStackLayout>
+                        </HorizontalStackLayout>
+                    </Frame>
+
+
+                    <Frame Grid.Row="1" Margin="10"  BackgroundColor="#9F6853" BorderColor="White">
+                        <Grid ColumnDefinitions="*, *, *"
+                              RowDefinitions="Auto, Auto">
+
+                            <Label Grid.Row="0" Grid.Column="0" Text= "Check-in: "/>
+                            <Label Grid.Row="0" Grid.Column="1" Text= "Check-out: "/>
+                            <Label Grid.Row="0" Grid.Column="2" Text= "Estadia: "/>
+
+                            <Label Grid.Row="1" Grid.Column="0" Text= "27/05/24"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text= "30/05/24"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text= "3"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="2" Margin="10"  BackgroundColor="#9F6853" BorderColor="White">
+                        <HorizontalStackLayout>
+                            <Label Text="Valor Total:"/>
+                            <Label Text="R$: 750,00"/>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </Grid>
+
+                <Button Text="Confirmar" 
+                      BackgroundColor="#FED79F" 
+                      HorizontalOptions="Center" 
+                      TextColor="White" 
+                      FontFamily="Itim-Regular" 
+                      FontSize="20"/>
+            </VerticalStackLayout>
         </Frame>
-
-
-        <Frame Margin="10">
-            <Grid ColumnDefinitions="*, *, *"
-                  RowDefinitions="Auto, Auto">
-
-                <Label Grid.Row="0" Grid.Column="0"
-                       Text="Check-in: "/>
-                <Label Grid.Row="0" Grid.Column="1"
-        Text="Check-out: "/>
-                <Label Grid.Row="0" Grid.Column="2"
-        Text="Estadia: "/>
-
-                <Label Grid.Row="1" Grid.Column="0"
-               Text="27/05/24"/>
-                <Label Grid.Row="1" Grid.Column="1"
-Text="30/05/24 "/>
-                <Label Grid.Row="1" Grid.Column="2"
-Text="3"/>
-            </Grid>
-        </Frame>
-
-        <Frame Margin="10">
-            <HorizontalStackLayout>
-                <Label Text="Valor Total:"/>
-                <Label Text="R$: 750,00"/>
-            </HorizontalStackLayout>
-        </Frame>
-
-        <Button Text="Voltar"
-                HorizontalOptions="Center"
-                Clicked="Button_Clicked"/>
     </VerticalStackLayout>
+
 </ContentPage>

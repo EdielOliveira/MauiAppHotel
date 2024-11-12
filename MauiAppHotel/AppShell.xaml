@@ -6,14 +6,7 @@
     xmlns:local="clr-namespace:MauiAppHotel.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="MauiAppHotel">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:ContratacaoHospedagem}"
-        Route="MainPage" />
-
-    <ShellContent
-        Title="Sobre"
-        ContentTemplate="{DataTemplate local:SobrePage}"
-        Route="SobrePage" />
+    
+    <ShellContent Route="InicioPage" ContentTemplate="{DataTemplate local:InicioPage}" />
+    <ShellContent Route="CalcularPrecoPage" ContentTemplate="{DataTemplate local:ContratacaoHospedagem}" />
 </Shell>

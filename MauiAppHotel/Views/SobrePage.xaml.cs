@@ -10,9 +10,9 @@ namespace MauiAppHotel.Views
             InitializeComponent();
         }
 
-        private async void OnVoltarClicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopAsync(); // Volta para a página anterior
+             Navigation.PushAsync(new InicioPage());
         }
     }
 }

@@ -44,4 +44,9 @@ public partial class ContratacaoHospedagem : ContentPage
         dtpck_chekout.MinimumDate = data_selecionada_chekin.AddDays(1);
         dtpck_chekout.MaximumDate = data_selecionada_chekin.AddMonths(6);
     }
+
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new InicioPage());
+    }
 }

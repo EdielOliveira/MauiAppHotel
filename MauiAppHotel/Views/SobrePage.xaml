@@ -2,33 +2,68 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.SobrePage"
+               NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#2D4253"
              Title="Sobre"
-             BackgroundColor="{StaticResource Gray950}">
+           >
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
-                         Padding="20">
-        <Label 
-            Text="Sobre o Desenvolvedor"
-            FontFamily="Itim-Regular"
-            FontSize="32"
-            TextColor="{StaticResource Primary}"
-            HorizontalOptions="Center" />
+                    Padding="10">
+
+
+        <Button Text="Voltar" 
+    BackgroundColor="#FED79F" 
+                Clicked="Button_Clicked"
+    HorizontalOptions="Start" 
+    Margin="10"
+    TextColor="White" 
+    FontFamily="Itim-Regular" 
+    FontSize="20"/>
 
         <Label 
-            Text="Desenvolvedor: Ediel"
-            FontSize="24"
-            TextColor="{StaticResource Primary}"
-            HorizontalOptions="Center" />
+    Text="Sobre"
+    FontFamily="Itim-Regular"
+    HorizontalTextAlignment="Center"
+    FontSize="40"
+    TextColor="{StaticResource White}"
+            Padding="10"/>
 
-        <Label 
-            Text="Ano de Desenvolvimento: 2024"
-            FontSize="24"
-            TextColor="{StaticResource Primary}"
-            HorizontalOptions="Center" />
+        <Frame Padding="10" BackgroundColor="#9F6853" BorderColor="#9F6853">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto, Auto">
 
-        <Button Text="Voltar"
-                Clicked="OnVoltarClicked"
-                HorizontalOptions="Center"
-                Margin="0,20,0,0"/>
+                    <Frame Grid.Row="0" Margin="10"  BackgroundColor="#9F6853" BorderColor="White">
+                        <HorizontalStackLayout >
+                            <HorizontalStackLayout Margin="10">
+                                <Label Text="Dev: Ediel"/>
+                            </HorizontalStackLayout>
+                        </HorizontalStackLayout>
+                    </Frame>
+
+
+                    <Frame Grid.Row="1" Margin="10"  BackgroundColor="#9F6853" BorderColor="White">
+                        <Grid ColumnDefinitions="*, *, *"
+                           RowDefinitions="Auto, Auto">
+
+                            <Label Grid.Row="0" Grid.Column="0" Text= "Ano Dev " HorizontalOptions="Center"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text= "versão: " HorizontalOptions="Center"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text= "Ling: " HorizontalOptions="Center"/>
+
+                            <Label Grid.Row="1" Grid.Column="0" Text= "2024" HorizontalOptions="Center"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text= "1.0.0.12" HorizontalOptions="Center"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text= "CS" HorizontalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="2" Margin="10"  BackgroundColor="#9F6853" BorderColor="White">
+                        <HorizontalStackLayout>
+                            <Label Text="O QUE É? :"/>
+                            <Label Text=" App de Agendamento"/>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </Grid>
+
+            </VerticalStackLayout>
+        </Frame> 
     </VerticalStackLayout>
 </ContentPage>
