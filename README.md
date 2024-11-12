@@ -11,7 +11,7 @@
 
 ![image](http://www.unow.com.br/emDesenvolvimento.gif)
 
-<img src="http://img.shields.io/static/v1?label=STATUS&message=%20FINALIZADO&color=BLUE&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=%20EMDESENVOLVIMENTO&color=ORANGE&style=for-the-badge"/>
 
 </div>
 
